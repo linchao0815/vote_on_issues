@@ -1,4 +1,4 @@
-class CreateVoteOnIssues < ActiveRecord::Migration
+class CreateVoteOnIssues < Rails.version < '5.1' ? ActiveRecord::Migration : ActiveRecord::Migration[4.2]
   def self.up
     create_table :vote_on_issues do |t|
       t.datetime :created_at
